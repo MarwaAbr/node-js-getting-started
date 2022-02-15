@@ -14,5 +14,5 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
    .get ('/api/contacts',async(req, res) => {
-const {rows}= await db.query( `SELECT name, email, phone FROM salesforce.contact`)res.json(rows)})
+const {rows}= await db.query(`SELECT name, email, phone FROM salesforce.contact`)res.json(rows)})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
